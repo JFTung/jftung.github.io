@@ -1,2 +1,2 @@
 # jftung.github.io
-Test webpage
+This is a test webpage made using GitHub's Automatic Page Generator.
