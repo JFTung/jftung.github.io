@@ -35,5 +35,5 @@ Connect via your web browser at `http://localhost:4000`.
 Ensure your GitHub Pages gem is up to date
 
 ```
-$ gem update
+$ bundle update
 ```
