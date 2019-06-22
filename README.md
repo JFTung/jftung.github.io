@@ -8,7 +8,7 @@ This is my personal webpage I'm using to learn web development.
 
 Install Ruby and Bundler:
 
-```shell
+```
 $ sudo apt-get install ruby-dev
 $ gem install bundler
 ```
@@ -18,13 +18,13 @@ $ gem install bundler
 Install Jekyll and other dependencies from the GitHub Pages gem by running this
 from this repository's root directory:
 
-```shell
+```
 jftung.github.io $ bundle install
 ```
 
 Build and run the site locally with Jekyll:
 
-```shell
+```
 jftung.github.io $ bundle exec jekyll serve
 ```
 
@@ -34,6 +34,6 @@ Connect via your web browser at `http://localhost:4000`.
 
 Ensure your GitHub Pages gem is up to date
 
-```shell
+```
 $ gem update
 ```
