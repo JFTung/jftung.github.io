@@ -25,7 +25,16 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>Instructions</h3>
-        <p>Upload a Microsoft Excel file that contains</p>
+        <p>This simple web app will randomly pick a raffle winner, given a list of entrants along with the number of raffle tickets belonging to each entrant. Upload a Microsoft Excel (.xlsx) file that conforms to the following formatting:</p>
+        <ul>
+          <li>The below data is all on the first sheet</li>
+          <li>There are no blank or title rows preceeding the data: the relevant data begins at Row 1</li>
+          <li>Column A contains the entrant's first name</li>
+          <li>Column B contains the entrant's last name</li>
+          <li>Column D contains the number of raffle tickets belonging to the entrant</li>
+          <li>Other sheets and columns are allowed to contain irrelevant data, but it will not be processed</li>
+        </ul>
+        <p>Upon uploading a valid file and clicking the "Select Winner" button, the winner's full name will appear below.</p>
         <input id="spreadsheetFile"
                type="file"
                accept=".csv, .ods, .xls, .xlsx">
