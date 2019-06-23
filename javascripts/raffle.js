@@ -4,9 +4,17 @@ function output(str) {
     document.getElementById("outputText").innerHTML = str;
 }
 
-// Array is empty, or consists of only an empty string
+// Array is empty, or consists of only empty strings
 function isEmptyRow(array) {
-    return array.length === 0 || array.length === 1 && !array[0];
+    if (array.length === 0) {
+        return true;
+    }
+    for (let idx in array) {
+        if (array[0]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 function randomButtonClicked() {
