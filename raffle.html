@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description"
+          content="Weighted Random Selection : Selecting a random item given a list of items and their weights">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <title>Web Apps</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/JFTung/jftung.github.io">View on GitHub</a>
+          <h1 id="project_title">Weighted Random Selection</h1>
+          <h2 id="project_tagline">Selecting a random item given a list of items and their weights</h2>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Instructions</h3>
+        <p>This simple web app will randomly pick a raffle winner, given a list of entrants along with the number of raffle tickets belonging to each entrant. Upload a Microsoft Excel (.xlsx) file that conforms to the following formatting:</p>
+        <ul>
+          <li>The below data is all on the first sheet</li>
+          <li>There are no blank or title rows preceeding the data: the relevant data begins at Row 1</li>
+          <li>Column A contains the entrant's first name</li>
+          <li>Column B contains the entrant's last name</li>
+          <li>Column D contains the number of raffle tickets (positive integer) belonging to the entrant</li>
+          <li>Other sheets and columns are allowed to contain irrelevant data, but it will not be processed</li>
+        </ul>
+        <p>Upon uploading a valid file and clicking the "Select Winner" button, the winner's full name will appear below.</p>
+        <input id="spreadsheetFile"
+               type="file"
+               accept=".csv, .ods, .xls, .xlsx">
+        </input>
+        <button id="randomButton" type="button" onclick="randomButtonClicked()">
+            Select Winner
+        </button>
+        <p id="outputText"></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.8/xlsx.full.min.js"></script>
+    <script src="/javascripts/papaparse.min.js"></script>
+    <script src="/javascripts/raffle.js"></script>
+  </body>
+</html>

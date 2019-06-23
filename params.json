@@ -1,6 +1,6 @@
 {
-  "name": "Jayson Tung's Homepage",
-  "tagline": "TEST",
-  "body": "### This is a test website made using GitHub Pages.\r\n\r\nThis is a placeholder while I build my portfolio.\r\n\r\nIn the meantime you can find me on LinkedIn at https://www.linkedin.com/in/jftung.",
+  "name": "Name",
+  "tagline": "Tagline",
+  "body": "Body",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
