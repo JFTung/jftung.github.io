@@ -4,7 +4,7 @@ function output(str) {
     document.getElementById("outputText").innerHTML = str;
 }
 
-// Array is empty, or has one item that is an empty string
+// Array is empty, or consists of only an empty string
 function isEmptyRow(array) {
     return array.length === 0 || array.length === 1 && !array[0];
 }
@@ -72,7 +72,6 @@ function processEntrants(rawEntrants) {
         const rawEntrant = rawEntrants[idx];
         let entrant = {};
         if (isEmptyRow(rawEntrant)) {
-            // Skip empty rows
             continue;
         }
         if (rawEntrant.length < 3) {
@@ -90,9 +89,14 @@ function processEntrants(rawEntrants) {
                 numTicketsString = rawEntrant[3];
             }
             entrant.numTickets = parseInt(numTicketsString, 10);
-            if (!entrant.numTickets) {
+            if (isNaN(entrant.numTickets)) {
                 output("Invalid row formatting: " + rawEntrant + ": " +
                        numTicketsString + " is not an integer");
+                return;
+            }
+            if (entrant.numTickets < 0) {
+                output("Invalid row formatting: " + rawEntrant + ": " +
+                       numTicketsString + " is not a positive integer");
                 return;
             }
         }
